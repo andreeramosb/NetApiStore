@@ -1,0 +1,22 @@
+CREATE DATABASE StoreDB;
+GO
+
+USE StoreDB;
+GO
+
+CREATE TABLE Products(
+	Id INT IDENTITY(1,1) PRIMARY KEY,
+	ProductName VARCHAR(100) NOT NULL,
+	Price DECIMAL(10,2) NOT NULL,
+	Stock INT NOT NULL
+);
+
+DROP TABLE IF EXISTS StoreDB;
+
+INSERT INTO Products
+VALUES
+('Laptop', 3500,10),
+('Mouse', 50, 100),
+('Monitor', 600, 20)
+
+SELECT * FROM Products;
